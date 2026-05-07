@@ -18,6 +18,7 @@ public class Menu {
             System.out.println("5. Mostrar Estudiantes");
             System.out.println("6. Exportar");
             System.out.println("7. Importar");
+            System.out.println("8. Ordenar");
             System.out.println("8. Salir");
             int opt = v.ValidarEntero(sc);
             switch (opt) {
@@ -42,6 +43,9 @@ public class Menu {
                     break;
                 case 7:
                     System.out.println("pagina en mantenimiento");
+                    break;
+                case 8:
+                    m.Ordenar(l);
                     break;
                 case 8:
                     System.out.println("chao chao");

@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Comparator;
 import java.util.LinkedList;
 public class Metodos {
     public LinkedList<ObjEstudiante> LLenarLista(LinkedList<ObjEstudiante> l, Scanner sc, Metodos m) {
@@ -85,5 +86,9 @@ public class Metodos {
                 System.out.println("------------------------------");
             }
         }
+    }
+    public void Ordenar(LinkedList<ObjEstudiante> l)
+    {
+        //  l.sort(Comparator.comparing(ObjEstudiante::getFecha));
     }
 }
