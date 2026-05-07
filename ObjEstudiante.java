@@ -1,15 +1,20 @@
+import java.sql.Date;
+import java.time.LocalDate;
+
 public class ObjEstudiante {
     private String Nombre;
     private String Carnet;
     private int Cedula;
+    private LocalDate FechaIngreso;
 
     public ObjEstudiante() {
     }
 
-    public ObjEstudiante(String Carnet, int Cedula, String Nombre) {
-        this.Carnet = Carnet;
-        this.Cedula = Cedula;
-        this.Nombre = Nombre;
+    public ObjEstudiante(String nombre, String carnet, int cedula, LocalDate fechaIngreso) {
+        Nombre = nombre;
+        Carnet = carnet;
+        Cedula = cedula;
+        FechaIngreso = fechaIngreso;
     }
 
     public String getNombre() {
@@ -34,6 +39,14 @@ public class ObjEstudiante {
 
     public void setCedula(int Cedula) {
         this.Cedula = Cedula;
+    }
+
+    public LocalDate getFechaIngreso() {
+        return FechaIngreso;
+    }
+
+    public void setFechaIngreso(LocalDate fechaIngreso) {
+        FechaIngreso = fechaIngreso;
     }
 
 }

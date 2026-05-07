@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.LinkedList;
 public class Metodos {
@@ -25,6 +26,7 @@ public class Metodos {
                 nombre = sc.nextLine();
             }
             o.setNombre(nombre);
+            o.setFechaIngreso(LocalDate.now());
             l.add(o);
             System.out.println("Desea seguir Ingresando estudiantes Y/N");
             opt = sc.nextLine();
@@ -42,6 +44,7 @@ public class Metodos {
             System.out.println("Nombre: " + o.getNombre());
             System.out.println("Carnet: " + o.getCarnet());
             System.out.println("Cedula: " + o.getCedula());
+             System.out.println("fechaIngreso: " + o.getFechaIngreso());
             System.out.println("------------------------------");
         }
     }
