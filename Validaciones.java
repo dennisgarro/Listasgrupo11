@@ -4,7 +4,7 @@ public class Validaciones {
     public int ValidarEntero(Scanner sc) {
         while (!sc.hasNextInt()) {
             System.out.println("Por favor Ingrese un digito Numérico");
-            sc.next();
+            sc.nextLine();
         }
         return sc.nextInt();
     }
@@ -17,5 +17,9 @@ public class Validaciones {
         }
         return true;
 
+    }
+
+    public boolean ValidarTexto(String texto){
+        return texto.matches("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]+");
     }
 }
