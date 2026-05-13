@@ -7,7 +7,7 @@ public class Menu {
         Metodos m = new Metodos();
         Validaciones v = new Validaciones();
         LinkedList<ObjEstudiante> l = new LinkedList<>();
-        boolean bandera = true;
+         boolean bandera = true;
         while (bandera) {
             System.out.println("Bienvenidos estudiantes");
             System.out.println("Que accion desea realizar");
@@ -19,7 +19,7 @@ public class Menu {
             System.out.println("6. Exportar");
             System.out.println("7. Importar");
             System.out.println("8. Ordenar");
-            System.out.println("8. Salir");
+            System.out.println("9. Salir");
             int opt = v.ValidarEntero(sc);
             switch (opt) {
                 case 1:
@@ -47,7 +47,7 @@ public class Menu {
                 case 8:
                     m.Ordenar(l);
                     break;
-                case 8:
+                case 9:
                     System.out.println("chao chao");
                     bandera = false;
                     break;

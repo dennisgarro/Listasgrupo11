@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.LinkedList;
+
 public class Metodos {
     public LinkedList<ObjEstudiante> LLenarLista(LinkedList<ObjEstudiante> l, Scanner sc, Metodos m) {
         boolean pedir = true;
@@ -11,6 +12,7 @@ public class Metodos {
             ObjEstudiante o = new ObjEstudiante();
             System.out.println("Por favor Ingrese la cedula");
             o.setCedula(v.ValidarEntero(sc));
+            o.setCedula(v.ValidarCedula(sc));
             System.out.println("Ingrese El numero de carnet");
             sc.nextLine();
             String carnet = sc.nextLine();
@@ -39,15 +41,17 @@ public class Metodos {
         }
         return l;
     }
+
     public void MostrarEstudiates(LinkedList<ObjEstudiante> l) {
         for (ObjEstudiante o : l) {
             System.out.println("Nombre: " + o.getNombre());
             System.out.println("Carnet: " + o.getCarnet());
             System.out.println("Cedula: " + o.getCedula());
-             System.out.println("fechaIngreso: " + o.getFechaIngreso());
+            System.out.println("fechaIngreso: " + o.getFechaIngreso());
             System.out.println("------------------------------");
         }
     }
+
     public LinkedList<ObjEstudiante> Modificar(LinkedList<ObjEstudiante> l, Validaciones v, Scanner sc) {
         System.out.println("Por favor Ingrese la cedula a modificar");
         int cedula = v.ValidarEntero(sc);
@@ -72,12 +76,14 @@ public class Metodos {
         }
         return l;
     }
+
     public LinkedList<ObjEstudiante> Eliminar(LinkedList<ObjEstudiante> l, Validaciones v, Scanner sc) {
         System.out.println("Por favor Ingrese la cedula a eliminar");
         int cedula = v.ValidarEntero(sc);
         l.removeIf(x -> x.getCedula() == cedula);
         return l;
     }
+
     public void Consultar(LinkedList<ObjEstudiante> l, Validaciones v, Scanner sc) {
         System.out.println("Por favor Ingrese la cedula a buscar");
         int cedula = v.ValidarEntero(sc);
@@ -90,8 +96,8 @@ public class Metodos {
             }
         }
     }
-    public void Ordenar(LinkedList<ObjEstudiante> l)
-    {
-        //  l.sort(Comparator.comparing(ObjEstudiante::getFecha));
+
+    public void Ordenar(LinkedList<ObjEstudiante> l) {
+        // l.sort(Comparator.comparing(ObjEstudiante::getFecha));
     }
 }
